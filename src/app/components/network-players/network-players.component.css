@@ -1,0 +1,44 @@
+.network-player-container {
+    margin-bottom: 10px;
+}
+
+.network-player {
+    background-color: #aaa;
+    height: 40px;
+    min-width: 10%;
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;   
+    flex-direction: row;
+    justify-content: center;
+}
+
+.network-player-in-duel {
+    background-color: #ff5959;
+    height: 40px;
+    min-width: 10%;
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;   
+    flex-direction: row;
+    justify-content: center;
+}
+
+.network-player p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: revert;
+}

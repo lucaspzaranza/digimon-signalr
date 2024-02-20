@@ -1,0 +1,5 @@
+<div *ngFor="let player of (allPlayers$ | async)" class="network-player-container">
+    <button *ngIf="!player.isLocal" mat-raised-button (click)="challenge(player)">
+        <p>{{player.name}} {{player.isDueling? ' - In Duel' : ''}}</p>
+    </button>
+</div>

@@ -1,0 +1,11 @@
+<div [ngClass]="inDuel && !digiCard?.selected? duelClassName : 'card-container'">
+    <div class="digi-card">
+        <span class="digi-attack">{{digiCard?.attack}}</span>
+        <div class="digi-data">
+            <h3>{{digiCard?.digimon?.name}}</h3>
+        </div>
+        <img class="digi-img" [src]="digiCard?.digimon?.img"/>
+        <img class="digi-card-background" [src]="!invibisle? '../../../assets/digi.png' : ''"/>
+        <div class="digi-level"><span>{{digiCard?.digimon?.level}}</span></div>
+    </div>
+</div>

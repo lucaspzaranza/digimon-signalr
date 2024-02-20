@@ -1,0 +1,44 @@
+.endgame-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.endgame-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loser-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.loser-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crying-image {
+    width: 300px;
+}
+
+.card {
+    width: 50vw;
+}
+
+img {
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+}

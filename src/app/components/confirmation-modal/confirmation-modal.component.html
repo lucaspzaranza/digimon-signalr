@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+
+<div class="modal-content">
+   <div mat-dialog-content>{{data.text}}</div>
+   <mat-spinner *ngIf="data.loading"></mat-spinner>
+</div>
+
+<div mat-dialog-actions>
+   <button *ngIf="data.hideCloseButton === undefined ||
+      (data.hideCloseButton !== undefined && !data.hideCloseButton)" 
+      mat-raised-button mat-dialog-close (click)="data.closeCallback !== undefined? 
+      data.closeCallback() : undefined">
+      Close
+   </button>
+
+   <button *ngIf="data.acceptButton" 
+      mat-raised-button mat-dialog-close color="primary" 
+      (click)="data.acceptCallback !== undefined? data.acceptCallback() : undefined">Accept</button>
+</div>

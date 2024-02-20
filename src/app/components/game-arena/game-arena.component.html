@@ -1,0 +1,36 @@
+<div class="arena-container">
+    <mat-card class="battle-log">
+        <mat-card-content>
+            <mat-card-header>
+                <mat-card-title>
+                    Battle Log
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-card-subtitle>
+                    {{(log$ | async)}}
+                </mat-card-subtitle>
+            </mat-card-content>
+        </mat-card-content>
+    </mat-card>
+    
+    <div class="cards-and-fight-button-container">
+        <div class="card">
+            <app-digicard [invibisle]="localCard === undefined" [digiCard]="localCard" [inDuel]="false"></app-digicard>
+        </div>
+        
+        <mat-card class="duel-card">
+            <mat-card-content>
+                <h2>VS</h2>
+                <button [disabled]="localCard === undefined || networkCard === undefined"
+                mat-raised-button color="warn" (click)="fight()">
+                Fight!
+            </button>        
+        </mat-card-content>
+    </mat-card>
+    
+    <div class='card'>
+        <app-digicard [invibisle]="networkCard === undefined" [digiCard]="networkCard" [inDuel]="false"></app-digicard>
+        </div>
+    </div>
+</div>

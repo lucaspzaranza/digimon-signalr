@@ -1,0 +1,93 @@
+.card-container {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: scale(1, 1);
+    transition: ease-in 0.1s;
+}
+
+.card-container-duel, .card-container-duel-left, .card-container-duel-middle {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    transform: scale(1, 1);
+    transition: ease-in 0.1s;
+}
+
+.card-container-duel:hover {
+    transform-origin: right bottom;
+    transform: scale(1.2, 1.2);
+    transition: ease-in 0.1s;
+}
+
+.card-container-duel-left:hover {
+    transform-origin: left bottom;
+    transform: scale(1.2, 1.2);
+    transition: ease-in 0.1s;
+}
+
+.card-container-duel-middle:hover {
+    transform-origin: center bottom;
+    transform: scale(1.2, 1.2);
+    transition: ease-in 0.1s;
+}
+
+.digi-card{
+    width: 200px;
+    /* width: 150px; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.digi-card-background {
+    position: absolute;
+    height: 280px;
+    /* height: 210px; */
+}
+
+.digi-img {
+    width: 150px;
+    /* width: 115px; */
+}
+
+.digi-data {
+    height: 30px; 
+    width: 100%;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+
+.digi-level {
+    z-index: 1;
+    position: relative;
+    bottom: -17px;
+    left: 10px;
+}
+
+h3 {
+    font-size: 0.75em;
+    top: -40px;
+    left: 45px;
+    padding: 0px;
+    position: relative;
+}
+
+span {
+    font-size: 0.9;
+}
+
+.digi-attack {
+    color: white;
+    position: relative;
+    left: -75px;
+    top: -16px;
+}
+
+img {
+    mix-blend-mode: color-burn;
+}

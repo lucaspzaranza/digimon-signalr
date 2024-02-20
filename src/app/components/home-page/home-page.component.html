@@ -1,0 +1,11 @@
+<div>
+  <img src="../../../assets/digimon-card-game-title.png" width="600"/>
+  
+  <form #form="ngForm" (ngSubmit)="signUp(form)">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input type="text" name="name" ngModel required matInput/>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary">Entrar</button>
+  </form>
+</div>

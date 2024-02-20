@@ -1,0 +1,26 @@
+<div class="endgame-container">
+    <div *ngIf="isWinner; else loser" #winner>
+        <mat-card class="card">
+            <mat-card-title>
+                <p>You are the winner! Congratulations!</p>
+            </mat-card-title>
+        </mat-card>
+        <img mat-card-image src="../../../assets/trophy-2.png" alt="digimon crests">
+    </div>
+
+    <ng-template #loser>
+        <mat-card style="margin-bottom: 20px;">
+            <mat-card-content class="loser-card-content">
+                <mat-card-title class="loser-card-title">
+                    You lost the battle :(
+                </mat-card-title>
+                <mat-card-subtitle>
+                    Don't be sad. Try to challenge another player and do your best!
+                </mat-card-subtitle>
+                <img class="crying-image" mat-card-image src="../../../assets/patamon-crying.png" alt="crying"/>
+            </mat-card-content>
+        </mat-card>
+    </ng-template>
+
+    <button mat-raised-button (click)="backToArena()">Go back to arena</button>
+</div>

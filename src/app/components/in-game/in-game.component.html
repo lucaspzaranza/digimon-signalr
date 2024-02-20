@@ -1,0 +1,34 @@
+<div class="ingame-container">
+    <div>
+        <mat-card>
+            <mat-card-content>
+                <h3>Network Player: {{ (netWorkPlayer$ | async)?.name }} | HP: {{ (netWorkPlayer$ | async)?.hp }}</h3>
+            </mat-card-content>
+        </mat-card>
+
+        <div class="ingame-digicards">
+            <div *ngFor="let card of (netWorkPlayer$ | async)?.cards">
+                <div *ngIf="card.selected" class="disabled-effect"></div>
+                <img [ngClass]="card.selected? 'cardback-disabled' : 'cardback'"
+                src="../../../assets/cardback.png" alt="cardback" />
+            </div>
+        </div>
+    </div>
+
+    <app-game-arena></app-game-arena>
+
+    <div>
+        <mat-card>
+            <mat-card-content>
+                <h3>Local Player: {{ (localPlayer$ | async)?.name }} | HP: {{ (localPlayer$ | async)?.hp }}</h3>
+            </mat-card-content>
+        </mat-card>
+
+        <div class="ingame-digicards">
+            <div *ngFor="let card of (localPlayer$ | async)?.cards; let i = index"
+            (click)="chooseDigimon(card)">
+            <div *ngIf="card.selected" class="disabled-effect"></div>
+            <app-digicard [digiCard]="card" [index]="i" [inDuel]="true" [invibisle]="false"></app-digicard>
+        </div>
+    </div>
+</div>

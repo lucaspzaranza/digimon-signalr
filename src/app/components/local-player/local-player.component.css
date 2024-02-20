@@ -1,0 +1,10 @@
+.local-player-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+p, h3 {
+    margin: 5px;
+    margin-left: 10px;
+}

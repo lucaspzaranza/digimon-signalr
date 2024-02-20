@@ -1,0 +1,58 @@
+.ingame-digicards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.ingame-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.cardback {
+    width: 200px;
+    height: 280px;
+
+    /* width: 150px;
+    height: 210px; */
+    margin-top: 10px;
+}
+
+.cardback-disabled {
+    width: 200px;
+    height: 280px;
+
+    /* width: 150px;
+    height: 210px; */
+    margin-top: 10px;
+}
+
+.card-selected {
+    width: 200px;
+    height: 280px;
+
+    /* width: 150px;
+    height: 210px; */
+}
+
+.disabled-effect {
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0.5;
+    background-color: gray;
+    z-index: 2;
+    border-radius: 10px;
+
+    width: 201px;
+    height: 280px;
+
+    /* width: 150px;
+    height: 210px; */
+}
+
+h3 {
+    margin: 0;
+}
