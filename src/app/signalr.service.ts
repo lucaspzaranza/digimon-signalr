@@ -23,10 +23,11 @@ import { ConfirmationModalComponent } from './components/confirmation-modal/conf
 export class SignalrService {
   // local url: 'http://localhost:5000/digihub'
   public hubConnection = new signalR.HubConnectionBuilder()
-    .withUrl('https://digi-signalr-hub-production.up.railway.app/digihub', {
+    .withUrl('https://digisignalr-dyb9crafcub9c3ff.centralus-01.azurewebsites.net/digihub', {
       skipNegotiation: true,
       transport: signalR.HttpTransportType.WebSockets
     })
+    .withAutomaticReconnect() // 💡 Essencial para manter vivo no plano grátis
     .configureLogging(signalR.LogLevel.Information)
     .build();
 
